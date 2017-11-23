@@ -42,6 +42,12 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # ActionMailer Config 
+  # (Carson) For Devise. Allows emails to be sent?
+  # (Carson) The two commented lines below are directly from proj1. Don't think we need it yet.
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.raise_delivery_errors = true
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
