@@ -2,7 +2,7 @@
   <h1> Users! </h1>
 
   <% @users.each do |u| %>
-    <%= link_to(u.name, 'users/'+u.id.to_s) %>
+    <%= link_to(u.email, 'users/'+u.id.to_s) %>
   </br>
   <% end %>
 

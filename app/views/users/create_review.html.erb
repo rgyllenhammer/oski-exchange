@@ -1,0 +1,14 @@
+<%= form_tag add_review_path do %>
+
+  <%= label_tag(:rate, "Rate (0-5)") %>
+  <%= text_field_tag(:rate, nil, placeholder: "1") %>
+
+</br>
+
+  <%= label_tag(:description, "Description (Why you gave your rate)") %>
+  <%= text_field_tag(:description, nil, placeholder: "Because... ") %>
+
+</br>
+
+  <%= submit_tag("Add your review!") %>
+<% end %>
