@@ -12,11 +12,6 @@ class UsersController < ApplicationController
     @reviews = @user.reviews
   end
 
-  def request
-    @user = User.find(params[:id])
-    @requests = @user.requests
-  end
-
   def create_review
   end
 

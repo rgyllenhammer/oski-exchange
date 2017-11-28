@@ -11,8 +11,7 @@ class OffersController < ApplicationController
 
     Offer.create(:title => title, :price => price, :description => description, :item => item)
 
-    redirect_to root_path
-
+    redirect_to '/users/'+item.user_id.to_s+'/requests'
   end
 
 end
