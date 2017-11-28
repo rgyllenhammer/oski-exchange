@@ -1,8 +1,8 @@
 <body>
   <h1> Users! </h1>
 
-  <% @users.each do |u| %>
-    <%= link_to(u.email, 'users/'+u.id.to_s) %>
+  <% @users.each do |user| %>
+  <%= link_to(user.email, user) %>
   </br>
   <% end %>
 

@@ -8,8 +8,8 @@
         title: <%= post.title %> <br />
         price: <%= post.price %> <br />
         description: <%= post.description %> <br />
-        poster: <b><%= post.user.email %></b> <br />
-        <%= link_to("make an offer", 'post/'+post.id.to_s+'/make_offer') %> <br />
+        poster: <b><%= link_to(post.user.email, post.user) %></b> <br />
+        <%= link_to("make an offer", '/post/'+post.id.to_s+'/make_offer') %> <br />
       </div>
       <br />
       <br />

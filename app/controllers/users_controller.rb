@@ -1,10 +1,14 @@
 class UsersController < ApplicationController
   def index
+    print("WE ARE IN INDEX\n")
     @users = User.all
+    print("FINISHED INDEX")
   end
 
   def show
+    print("WE ARE IN SHOW\n")
     @user = User.find(params[:id])
+    print("FINISHED SHOW")
   end
 
   def review
@@ -12,9 +16,13 @@ class UsersController < ApplicationController
     @reviews = @user.reviews
   end
 
-  # def request
-  #   @user = User.find(params[:id])
-  # end
+  def match
+    print("WE ARE IN MATCH\n")
+    # print('PARAMS s::::: ' + params)
+    # print('THE PARAMS[:id] is::::: ' + params[:id])
+    @user = User.find(params[:id])
+    print("FINISHED MATCH")
+  end
 
   def create_review
   end
