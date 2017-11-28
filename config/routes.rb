@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   get '/users', to: 'users#index', as: 'users'
   get '/users/:id', to: 'users#show', as: 'user'
   get '/users/:id/reviews', to: 'users#review', as: 'review'
-
+  
   # get '/users/:id/requests', to: 'users#request', as: 'request'
+
+  get '/users/:id/requests', to: 'users#request', as: 'request'
 
   get 'users/:id/create_review', to: 'users#create_review', as: 'create_review'
   post 'users/:id/add_review', to: 'users#add_review', as: 'add_review'
