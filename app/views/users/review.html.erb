@@ -1,11 +1,14 @@
 <h1> <%= @user.email %>'s reviews </h1>
-<%= link_to('add a review anonymously!!', create_review_path) %>
+<%= link_to('add a review !!', create_review_path) %>
 <br />
 <br />
 
 <% @user.reviews.each do |review| %>
   <div>
-      <b>Rate:</b>
+  	  <b>From: </b>
+      <%= link_to(@user.email, @user) %>
+  	<br />
+      <b>Rating:</b>
       <%= review.rate %>
     <br />
       <b>Description:</b>
