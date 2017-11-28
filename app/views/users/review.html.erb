@@ -4,7 +4,7 @@
 <br />
 
 <% @user.reviews.each do |review| %>
-  <div>
+  <div class="card-1">
   	  <b>From: </b>
       <%= link_to(@user.email, @user) %>
   	<br />
@@ -13,7 +13,6 @@
     <br />
       <b>Description:</b>
       <%= review.description %>
-    <br />
     <br />
   </div>
 <% end %>

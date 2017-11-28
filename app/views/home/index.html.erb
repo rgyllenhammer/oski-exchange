@@ -4,7 +4,7 @@
 
   <div id="post-section">
     <% @posts.reverse_each do |post| %>
-      <div class="post">
+      <div class="card-1">
         title: <%= post.title %> <br />
         price: <%= post.price %> <br />
         description: <%= post.description %> <br />
@@ -12,8 +12,7 @@
         <%= link_to("make an offer", '/post/'+post.id.to_s+'/make_offer') %> <br />
       </div>
       <br />
-      <br />
-    <% end %>
   </div>
 
 </body>
+<% end %>
