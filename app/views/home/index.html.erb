@@ -2,18 +2,18 @@
 <body>
   <h1> Welcome to the Oski Exchange </h1>
 
-  <div>
-
+  <div id="post-section">
     <% @posts.reverse_each do |post| %>
       <div class="post">
         title: <%= post.title %> <br />
         price: <%= post.price %> <br />
         description: <%= post.description %> <br />
         poster: <b><%= post.user.email %></b> <br />
+        <%= link_to("make an offer", 'post/'+post.id.to_s+'/make_offer') %> <br />
       </div>
       <br />
       <br />
     <% end %>
-
   </div>
+
 </body>

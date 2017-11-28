@@ -1,0 +1,30 @@
+
+<div id="original-post">
+  <h2> original post </h2>
+  title: <%= @post.title %> <br />
+  price: <%= @post.price %> <br />
+  description: <%= @post.description %> <br />
+</div>
+
+<div id="post-offer">
+  <h2> make offer </h2>
+  <%= form_tag submit_offer_path do %>
+
+    <%= label_tag(:title, "Title of Item") %>
+    <%= text_field_tag(:title, nil, placeholder: "Basketball") %>
+
+  </br>
+
+    <%= label_tag(:price, "Price of Item") %>
+    <%= text_field_tag(:price, nil, placeholder: "5-10$") %>
+
+  </br>
+
+  <%= label_tag(:description, "Description of Item)") %>
+  <%= text_field_tag(:description, nil, placeholder: "Slightly worn...") %>
+
+  </br>
+
+    <%= submit_tag("Submit your offer!") %>
+  <% end %>
+</div>
