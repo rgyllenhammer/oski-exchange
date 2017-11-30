@@ -9,7 +9,9 @@
         <b>price:</b> <%= post.price %> <br />
         <b>description:</b> <%= post.description %> <br />
         <b>poster:</b> <b><%= link_to(post.user.email, post.user) %></b> <br />
-        <%= link_to("make an offer", '/post/'+post.id.to_s+'/make_offer') %> <br />
+        <% if user_signed_in? %>
+          <%= link_to("make an offer", '/post/'+post.id.to_s+'/make_offer') %> <br />
+        <% end %>
       </div>
       <br />
   </div>
