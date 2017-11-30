@@ -13,10 +13,12 @@
       <b>price:</b> <%= o.price %> <br />
       <b>description:</b> <%= o.description %> <br />
       <b>poster:</b> <%= link_to(o.user.email, o.user) %> <br />
+
+      <%= link_to('accept offer', users_path) %>
+      <%= link_to('decline offer', users_path) %>
+      
       <hr />
 
-    <br />
-    <br />
     <% end %>
 
     <br />
