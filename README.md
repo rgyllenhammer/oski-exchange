@@ -33,6 +33,6 @@ belongs to a user.
 - Users can view posts and offers and users
 # Division of Labour(key focuses):
 - Ahmed: view management
-- Reese: controller logic,
+- Reese: controller logic and form handling
 - Carson: gem management and styling
 - Tony: screencast, writeup, git management, some controller
