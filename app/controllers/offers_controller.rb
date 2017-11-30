@@ -8,9 +8,9 @@ class OffersController < ApplicationController
     title = params[:title]
     price = params[:price]
     description = params[:description]
-  
-    Offer.create(:title => title, :price => price, :description => description, :item => item)
-  
+
+    Offer.create(:title => title, :price => price, :description => description, :item => item, :user => current_user)
+
     redirect_to '/users/'+item.user_id.to_s+'/match'
   end
 

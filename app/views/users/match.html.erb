@@ -1,0 +1,28 @@
+<h1> <%= @user.email %>'s offers </h1>
+
+<div>
+<% @user.items.each do |i| %>
+
+  <div class='card-1'>
+    <h3> Post: <%= i.title %> </h3><br />
+
+    <b>offers:</b>
+    <hr />
+    <% i.offers.each do |o| %>
+      <b>title:</b> <%= o.title %> <br />
+      <b>price:</b> <%= o.price %> <br />
+      <b>description:</b> <%= o.description %> <br />
+      <b>poster:</b> <%= link_to(o.user.email, o.user) %> <br />
+      <hr />
+
+    <br />
+    <br />
+    <% end %>
+
+    <br />
+    <br />
+    </div>
+  <% end %>
+
+
+</div>
