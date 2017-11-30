@@ -5,8 +5,7 @@
 
 <% @user.reviews.each do |review| %>
   <div class="card-1">
-  	  <b>From: </b>
-      <%= link_to(@user.email, @user) %>
+  	  <b>From: </b> anonymous
   	<br />
       <b>Rating:</b>
       <%= review.rate %>
